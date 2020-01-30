@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MavenPro-Regular.ttf">
+            <string>MavenPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PetTableViewCell" rowHeight="193" id="KGk-i7-Jjw" customClass="PetTableViewCell" customModule="FinalProjectHolstead" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="193"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="366" height="193"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5cj-Sn-c97" customClass="CachableImageView" customModule="FinalProjectHolstead" customModuleProvider="target">
+                        <rect key="frame" x="5.5" y="5.5" width="135" height="182"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="135" id="DHh-cj-QY5"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noresults_dog" translatesAutoresizingMaskIntoConstraints="NO" id="XNk-el-y7j" customClass="CachableImageView" customModule="FinalProjectHolstead" customModuleProvider="target">
+                        <rect key="frame" x="20" y="71" width="326" height="104"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmE-pK-x1X">
+                        <rect key="frame" x="149" y="55" width="210" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="30"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Results! Please try again with new filters!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXD-5U-qF6">
+                        <rect key="frame" x="44" y="8" width="278" height="55"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5cj-Sn-c97" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5.5" id="BrY-zk-KGz"/>
+                    <constraint firstAttribute="bottom" secondItem="5cj-Sn-c97" secondAttribute="bottom" constant="5.5" id="XfR-ym-M29"/>
+                    <constraint firstItem="5cj-Sn-c97" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5.5" id="YKu-8o-iLc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="bmE-pK-x1X" id="5pb-g6-Fmn"/>
+                <outlet property="noResultsFoundLabel" destination="kXD-5U-qF6" id="gJS-zW-1vD"/>
+                <outlet property="noResultsImage" destination="XNk-el-y7j" id="HFL-Wk-LWk"/>
+                <outlet property="petImage" destination="5cj-Sn-c97" id="F4G-0o-vVA"/>
+            </connections>
+            <point key="canvasLocation" x="165.21739130434784" y="151.67410714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="noresults_dog" width="152" height="124"/>
+    </resources>
+</document>
